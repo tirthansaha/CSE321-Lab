@@ -1,0 +1,68 @@
+1(a)
+---------
+touch 20101409_1.txt 20101409_2.txt 20101409_3.txt 20101409_4.txt 
+mkdir dibbyal dibbya2 
+mv 20101409_1.txt dibbyal
+mv 20101409_2.txt dibbyal
+mv 20101409_3.txt dibbya1
+cp ./dibbya1/20101409_1.txt
+cp ./dibbya1/20101409_2.txt ./dibbya2
+mkdir dibbya3
+cp -r ./dibbya1 ./dibbya3
+cd ./dibbya3
+ls -ld
+cd ./dibbyal
+ls -l
+chmod go+rx 20101409_1.txt
+chmod go+rx 20101409_2.txt
+cd ..
+cd ..
+cd ./dibbyal
+pwd -L
+cd ..
+sudo mv ./dibbya3 /root
+rm -r dibbyal dibbya2 
+rm 20101409_3.txt 20101409_4.txt
+
+
+1(b)
+----------
+cat> course.txt 
+CSE321 Operating System Sec7
+CSE461 Introduction to Robotics Sec4
+CSE350 Digital Electronics and Pulse Techniques Sec3 
+CSE425 Neural Networks Sec3
+grep -o 'CSE' course.txt wc -1
+
+
+1(c)
+---------
+cd /
+sudo -i
+ls -A
+
+1(d)
+---------
+touch sentence.txt
+cat> sentence.txt
+Hello world
+how are you?
+I love my pc
+do you enjoy playing video games?
+what type of games do you like to play? 
+I love casual story telling games 
+What about anime, series or movies?
+I like the artstyle of Demon Slayer
+Icecream is a good dessert
+Bangladesh team is playing bad in this world cup 
+The condition of outside is not that good today 
+The sky is cloudy
+Do you like badminton?
+People play badminton during winter season
+I support Barcelona
+We want our classes cancel for tomorrow
+I wish I were a cat
+Eat, sleep, meow repeat
+This course is very tough
+You should wake up early in the morning
+sed -n '5,17p' sentence.txt
